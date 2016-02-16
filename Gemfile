@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'puma'
 gem 'dalli'
 gem 'rack-cache'
+gem 'rack-ssl'
 gem 'dropbox-sdk', require: 'dropbox_sdk', github: 'TimPetricola/dropbox-sdk-ruby'
 
 group :development do

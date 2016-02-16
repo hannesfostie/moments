@@ -11,6 +11,8 @@ class Moments < Sinatra::Base
     ENV['MEMCACHE_USERNAME'] = ENV['MEMCACHIER_USERNAME'] if ENV['MEMCACHIER_USERNAME']
     ENV['MEMCACHE_PASSWORD'] = ENV['MEMCACHIER_PASSWORD'] if ENV['MEMCACHIER_PASSWORD']
 
+    use Rack::SSL
+
     set :cache, Dalli::Client.new
 
     use Rack::Cache,
